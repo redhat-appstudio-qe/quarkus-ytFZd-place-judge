@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-code-with-quarkus-cdab
+  namespace: e2e-demos-iwls-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images-protected@sha256:e52ad5dd0392b23895573213b2d25a1518f8a6f8c0d610e0822ceb1a37f46907
+        name: my-java-quarkus
+        resources: {}
+status: {}
